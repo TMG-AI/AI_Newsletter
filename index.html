@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit to AI Newsletter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 1.2rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 2rem;
+      background-color: #004aad;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003080;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Submit to the AI Newsletter</h1>
+
+  <form method="POST" action="https://<your-n8n-domain>/webhook/ai-newsletter-submission">
+    
+    <label for="submitter">Your Name</label>
+    <input type="text" id="submitter" name="submitter" required />
+
+    <label for="agent_in_action">🤖 Agent in Action</label>
+    <textarea id="agent_in_action" name="agent_in_action" rows="3" required></textarea>
+
+    <label for="community_ask">💬 Community Ask</label>
+    <textarea id="community_ask" name="community_ask" rows="3" required></textarea>
+
+    <label for="manual_intro">👋 Welcome/Intro (First Issue Only)</label>
+    <textarea id="manual_intro" name="manual_intro" rows="2" placeholder="Optional"></textarea>
+
+    <label for="tool_suggestion">🔧 Tool Suggestion</label>
+    <textarea id="tool_suggestion" name="tool_suggestion" rows="2" placeholder="Optional"></textarea>
+
+    <label for="prompt_submission">🔎 Prompt Suggestion</label>
+    <textarea id="prompt_submission" name="prompt_submission" rows="2" placeholder="Optional"></textarea>
+
+    <label for="faq_submission">❓ FAQ Suggestion</label>
+    <textarea id="faq_submission" name="faq_submission" rows="2" placeholder="Optional"></textarea>
+
+    <button type="submit">Submit to Newsletter</button>
+  </form>
+
+</body>
+</html>
