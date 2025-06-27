@@ -47,8 +47,13 @@
 
   <h1>Submit to the AI Newsletter</h1>
 
-  <form method="POST" action="https://<your-n8n-domain>/webhook/ai-newsletter-submission">
-    
+  <form 
+    method="POST" 
+    action="https://swheatman.app.n8n.cloud/webhook/ai-newsletter-submission" 
+    target="_self" 
+    onsubmit="return confirmSubmit();"
+  >
+
     <label for="submitter">Your Name</label>
     <input type="text" id="submitter" name="submitter" required />
 
@@ -72,6 +77,13 @@
 
     <button type="submit">Submit to Newsletter</button>
   </form>
+
+  <script>
+    function confirmSubmit() {
+      alert("✅ Your AI Newsletter submission has been received. The content will be processed shortly.");
+      return true;
+    }
+  </script>
 
 </body>
 </html>
